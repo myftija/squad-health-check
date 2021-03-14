@@ -13,6 +13,7 @@ const Row = styled.button`
   font-size: 14pt;
   font-weight: 700;
   padding: 20px 0;
+  transition: all 200ms ease-in-out;
   white-space: nowrap;
   width: 100%;
 
@@ -24,25 +25,29 @@ const Row = styled.button`
     outline: none;
   }
 
-  &:hover {
+  &:hover,
+  :focus {
     background-color: #eeeeee;
 
     & span#arrow {
       color: #6633cc;
+      transform: translateX(5px);
     }
 
     & span#index {
       color: #6633cc;
       opacity: 1;
+      transform: translateX(-5px);
     }
   }
 
   &:focus {
-    background-color: #eeeeee;
+    background-color: #e1e1e1;
   }
 `;
 
 const Index = styled.span.attrs({ id: "index" })`
+  transition: all 200ms ease-in-out;
   opacity: 0.3;
   text-align: right;
   flex-grow: 1;
@@ -78,6 +83,7 @@ const State = styled.span`
 
   > span#arrow {
     color: #a4a4a4;
+    transition: all 200ms ease-in-out;
   }
 `;
 
