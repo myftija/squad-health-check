@@ -1,7 +1,7 @@
 import { get, post } from "axios";
 import { Fail, Success } from "monet";
 
-const baseUrl = "http://localhost:8080";
+const baseUrl = process.env.REACT_APP_API_URL;
 
 export const fetchSurveys = async () => {
   const path = "/surveys";
