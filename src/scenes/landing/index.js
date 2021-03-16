@@ -83,16 +83,21 @@ export const Landing = () => {
         </p>
       </Empty>
     ) : (
-      surveys.map((s, i) => (
-        <Survey
-          key={i}
-          index={i + 1}
-          date={s.date}
-          responseCount={s.responseCount}
-          completed={cookies[s.date] !== undefined}
-          onClick={() => navigate(`/survey/${s.date}`)}
-        />
-      ))
+      surveys
+        .sort((s1, s2) =>
+          s1.date === s2.date ? 0 : s1.date > s2.date ? 1 : -1
+        )
+        .map((s, i) => (
+          <Survey
+            key={i}
+            index={i + 1}
+            date={s.date}
+            responseCount={s.responseCount}
+            completed={cookies[s.date] !== undefined}
+            onClick={() => navigate(`/survey/${s.date}`)}
+          />
+        ))
+        .reverse()
     );
 
   const renderLoadingSkeleton = () => (
