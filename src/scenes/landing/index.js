@@ -60,6 +60,8 @@ export const Landing = () => {
             ? "It appears we've ran into a Sheety situation :/ The monthly request limits of your Sheety subscription have been exceeded. Try again later or upgrade your subscription!"
             : "Something went terribly wrong. Try again later!";
         alert(message);
+        setIsLoading(false);
+        return;
       }
 
       setSurveys(surveysOrFailure.success());

@@ -10,7 +10,7 @@ export const fetchSurveys = async () => {
     const { surveys } = result.data;
     return Success(surveys);
   } catch (e) {
-    return e.response.status === 402 ? Fail("ran_out_of_sheety") : Fail();
+    return e.response && e.response.status === 402 ? Fail("ran_out_of_sheety") : Fail();
   }
 };
 
@@ -54,6 +54,6 @@ export const submitResponse = async (
     await post(baseUrl + path, requestBody);
     return Success();
   } catch (e) {
-    return e.response.status === 402 ? Fail("ran_out_of_sheety") : Fail();
+    return e.response && e.response.status === 402 ? Fail("ran_out_of_sheety") : Fail();
   }
 };
