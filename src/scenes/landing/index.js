@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import styled from "styled-components";
+
 import { fetchSurveys } from "../../apiClient";
 import { PlainContainer, SubHeader } from "../../components/misc";
 import { Survey } from "./survey";

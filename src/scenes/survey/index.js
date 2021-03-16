@@ -1,13 +1,9 @@
 import some from "lodash.some";
 import React, { useState } from "react";
 import { useCookies } from "react-cookie";
+
 import { submitResponse } from "../../apiClient";
-import {
-  BarButton,
-  PlainContainer,
-  SubHeader,
-  TextArea
-} from "../../components/misc";
+import { BarButton, PlainContainer, SubHeader, TextArea } from "../../components/misc";
 import { aspects } from "./aspects";
 import { Completed } from "./completed";
 import { FeedbackAspect } from "./feedbackAspect";

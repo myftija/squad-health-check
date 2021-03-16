@@ -1,11 +1,7 @@
-import {
-  faCaretDown,
-  faCaretUp,
-  faEquals,
-} from "@fortawesome/free-solid-svg-icons";
+import { faCaretDown, faCaretUp, faEquals } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
-import tinycolor from 'tinycolor2';
+import tinycolor from "tinycolor2";
 
 const Container = styled.button`
   background-color: ${(p) => (p.isSelected ? p.accentColor : "#e5e5e5")};

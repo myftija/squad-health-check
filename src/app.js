@@ -1,9 +1,10 @@
 import { navigate, useRoutes } from "hookrouter";
 import React from "react";
+
 import { Logo } from "./components/logo";
 import { Landing } from "./scenes/landing";
-import { Survey } from "./scenes/survey";
 import { PageNotFound } from "./scenes/pageNotFound";
+import { Survey } from "./scenes/survey";
 
 const routes = {
   "/": () => <Landing />,
