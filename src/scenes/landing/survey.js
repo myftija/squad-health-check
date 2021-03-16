@@ -2,6 +2,7 @@ import { faCheck, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import styled from "styled-components";
+import tinycolor from "tinycolor2";
 
 const Row = styled.button`
   background-color: #fafafa;
@@ -27,7 +28,7 @@ const Row = styled.button`
 
   &:hover,
   :focus {
-    background-color: #eeeeee;
+    background-color: ${tinycolor("#fafafa").darken(4).toString()};
 
     & span#arrow {
       color: #6633cc;
@@ -42,7 +43,7 @@ const Row = styled.button`
   }
 
   &:focus {
-    background-color: #e1e1e1;
+    background-color: ${tinycolor("#fafafa").darken(8).toString()};
   }
 `;
 

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import tinycolor from "tinycolor2";
 
 export const PlainContainer = styled.div`
   background: white;
@@ -31,9 +32,12 @@ export const BarButton = styled.button`
     outline: none;
   }
 
-  &:hover,
-  :focus {
-    background-color: #0adb88;
+  &:hover {
+    background-color: ${tinycolor("#00ff99").lighten(15).toString()};
+  }
+
+  &:focus {
+    background-color: ${tinycolor("#00ff99").darken(8).toString()};
   }
 
   &:active {
