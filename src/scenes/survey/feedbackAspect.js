@@ -45,6 +45,37 @@ const Row = styled.div`
       transform: translateX(5px);
     }
   }
+
+  @media (max-width: 980px) {
+    align-items: center;
+    flex-direction: column;
+
+    & ${ButtonGroup} {
+      width: 100%;
+
+      > button {
+        flex-grow: 1;
+      }
+    }
+
+    & ${ButtonGroup} + ${ButtonGroup} {
+      margin-left: 0;
+    }
+
+    & ${Aspect} {
+      padding: 0;
+    }
+
+    &:hover {
+      & ${Aspect} {
+        transform: none;
+      }
+    }
+
+    > * + * {
+      margin-top: 10px;
+    }
+  }
 `;
 
 const sentiments = ["bad", "ok", "good"];

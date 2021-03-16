@@ -15,18 +15,20 @@ const Container = styled.button`
   font-size: 11pt;
   font-weight: 700;
   line-height: 11pt;
-  min-width: 50px;
+  min-width: 5ch;
   padding: 6px 7px;
   text-align: center;
   transition: all 200ms ease-in-out;
   white-space: nowrap;
 
-  &:hover {
-    background-color: ${(p) =>
-      p.isSelected
-        ? tinycolor(p.accentColor).lighten(15).toString()
-        : p.accentColor};
-    color: #3b3b3c;
+  @media (hover: hover) {
+    &:hover {
+      background-color: ${(p) =>
+        p.isSelected
+          ? tinycolor(p.accentColor).lighten(15).toString()
+          : p.accentColor};
+      color: #3b3b3c;
+    }
   }
 
   &:focus {

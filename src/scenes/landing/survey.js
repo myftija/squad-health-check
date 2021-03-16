@@ -75,6 +75,10 @@ const State = styled.span`
     padding: 2px 5px;
     border-radius: 2px;
     vertical-align: middle;
+
+    @media (max-width: 600px) {
+      display: none;
+    }
   }
 
   > span#checkmark {
