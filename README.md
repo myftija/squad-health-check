@@ -45,6 +45,33 @@ It is quite straightforward to deploy the app and start using it in your team. T
 
 That's it! You can start using the app now.
 
+### Local Development
+
+First, you need to either create a separate Sheety app as shown the previous section or mock the API locally.
+This section goes with the latter approach and shows how to mock the Sheety API using [mockoon](https://mockoon.com/).
+
+1. Install [mockoon-cli](https://github.com/mockoon/cli) and start the mock API server:
+
+   ```shell
+   npm install -g @mockoon/cli
+   mockoon-cli start --data ./mockoon/sheety-api-mock.json -i 0
+   ```
+
+2. Export the mock API URL as an environment variable under the name `REACT_APP_API_URL`. You can also do this by creating a `.env.development.local` file in the root directly and defining the variable there:
+
+   ```shell
+   touch .env.development.local
+   echo "REACT_APP_API_URL=http://localhost:8080" > .env.development.local
+   ```
+
+   Refer to [.env.development.local.template](./.env.development.local.template).
+
+3. Serve the React app:
+
+   ```shell
+   yarn start
+   ```
+
 ## Usage
 
 Once you got the app all setup, start by removing the dummy data in your imported spreadsheet.

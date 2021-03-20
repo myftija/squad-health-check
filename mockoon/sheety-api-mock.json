@@ -1,0 +1,98 @@
+{
+  "source": "mockoon:1.12.0",
+  "data": [
+    {
+      "type": "environment",
+      "item": {
+        "uuid": "",
+        "lastMigration": 13,
+        "name": "SHC",
+        "endpointPrefix": "",
+        "latency": 0,
+        "port": 8080,
+        "routes": [
+          {
+            "uuid": "",
+            "documentation": "",
+            "method": "get",
+            "endpoint": "surveys",
+            "responses": [
+              {
+                "uuid": "",
+                "body": "{\n  \"surveys\": [\n    {\n      \"id\": 1,\n      \"date\": \"2020-11-01\",\n      \"responseCount\": 8\n    },\n    {\n      \"id\": 2,\n      \"date\": \"2020-12-01\",\n      \"responseCount\": 7\n    },\n    {\n      \"id\": 3,\n      \"date\": \"2021-01-01\",\n      \"responseCount\": 8\n    },\n    {\n      \"id\": 4,\n      \"date\": \"2021-02-01\",\n      \"responseCount\": 8\n    },\n    {\n      \"id\": 5,\n      \"date\": \"2021-03-01\",\n      \"responseCount\": 5\n    }\n  ]\n}\n",
+                "latency": 200,
+                "statusCode": 200,
+                "label": "",
+                "headers": [],
+                "filePath": "",
+                "sendFileAsBody": false,
+                "rules": [],
+                "rulesOperator": "OR",
+                "disableTemplating": false
+              }
+            ],
+            "enabled": true,
+            "randomResponse": false
+          },
+          {
+            "uuid": "",
+            "documentation": "",
+            "method": "post",
+            "endpoint": "responses",
+            "responses": [
+              {
+                "uuid": "",
+                "body": "{}",
+                "latency": 200,
+                "statusCode": 200,
+                "label": "",
+                "headers": [],
+                "filePath": "",
+                "sendFileAsBody": false,
+                "rules": [],
+                "rulesOperator": "OR",
+                "disableTemplating": false
+              }
+            ],
+            "enabled": true,
+            "randomResponse": false
+          }
+        ],
+        "proxyMode": false,
+        "proxyHost": "",
+        "https": false,
+        "cors": true,
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Access-Control-Allow-Origin",
+            "value": "*"
+          },
+          {
+            "key": "Access-Control-Allow-Methods",
+            "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+          },
+          {
+            "key": "Access-Control-Allow-Headers",
+            "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+          }
+        ],
+        "proxyReqHeaders": [
+          {
+            "key": "",
+            "value": ""
+          }
+        ],
+        "proxyResHeaders": [
+          {
+            "key": "",
+            "value": ""
+          }
+        ]
+      }
+    }
+  ]
+}
